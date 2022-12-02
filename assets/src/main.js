@@ -5,8 +5,9 @@ var citySearchedInputEl = document.querySelector("#searched-city");
 var searchHistoryEl;
 var searchHistoryButtonEl = document.querySelector("#search-history-button");
 
-//Variable to store API key
-var APIKey = "c463d1ce337cdd1109532dfc090902c3";
+//Variable to store API keys
+var weatherAPIKey = "c463d1ce337cdd1109532dfc090902c3";
+var youTubeAPIKey = "AIzaSyAEXZYwhtPi4f73-cJ_g8oCKHd1-4GtRyk";
 
 //Search bar click action function - reads user input from search bar, calls currentCityWeatherFunction and saveSearch function
 $("#submit").click(function(event){
@@ -55,7 +56,7 @@ searchHistoryButtonEl.addEventListener("click",searchHistoryHandler);
 
 //Function for Current Weather API Call
 var currentCityWeather = function(city){
-var queryCurrentWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${APIKey}`;
+var queryCurrentWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${weatherAPIKey}`;
 fetch(queryCurrentWeatherURL)
 .then(function(response){
     response.json().then(function(data){
@@ -95,3 +96,6 @@ humidityEl.textContent = "Humidity: " + weather.main.humidity + " %";
 currentWeatherContainerEl.appendChild(humidityEl);
 
 };
+
+//Function for YouTube Playlist API Call
+var youTube_Playlist_API = 'https://www.googleapis.com/youtube/v3/playlists';
