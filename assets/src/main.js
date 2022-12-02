@@ -70,6 +70,11 @@ var displayCurrentWeather =function(weather,searchedCity){
     currentWeatherContainerEl.textContent="";
     citySearchedInputEl.textContent=searchedCity;
 
+//Create span element to hold overall weather status 
+var statusEl = document.createElement("SPAN");
+statusEl.textContent = "Status: " + weather.weather[0].main;
+currentWeatherContainerEl.appendChild(statusEl);
+
 //Format date element and append to searched city
 var currentDate = document.createElement("SPAN");
 currentDate.textContent=" (" + moment(weather.dt.value).format('L')+ ") ";
