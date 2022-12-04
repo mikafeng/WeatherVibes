@@ -75,6 +75,7 @@ var statusEl = document.createElement("SPAN");
 statusEl.textContent = "Status: " + weather.weather[0].main;
 currentWeatherContainerEl.appendChild(statusEl);
 
+
 //Format date element and append to searched city
 var currentDate = document.createElement("SPAN");
 currentDate.textContent=" (" + moment(weather.dt.value).format('L')+ ") ";
@@ -103,4 +104,13 @@ currentWeatherContainerEl.appendChild(humidityEl);
 };
 
 //Function for YouTube Playlist API Call
-var youTube_Playlist_API = 'https://www.googleapis.com/youtube/v3/playlists';
+const searchTerms = ["rainy%20day%20music"];
+//const getSearchTerm = () => searchTerms[Math.floor(Math.random() * (searchTerms.length-1))];
+const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${searchTerms}&key=${youTubeAPIKey}`;
+// console.log(url);
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    //console.log(data.items[0].id.videoId);
+    document.querySelector(".youtubeVideo").src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
+});
