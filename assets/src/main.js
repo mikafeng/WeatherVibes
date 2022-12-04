@@ -8,7 +8,7 @@ var searchHistoryButtonEl = document.querySelector("#search-history-button");
 
 //Variable to store API keys
 var weatherAPIKey = "c463d1ce337cdd1109532dfc090902c3";
-var youTubeAPIKey = "AIzaSyAEXZYwhtPi4f73-cJ_g8oCKHd1-4GtRyk";
+var youTubeAPIKey = "AIzaSyDM2sR2vev0LrWNZ3RLH4-RvSlEH_BV2L0";
 
 //Search bar click action function - reads user input from search bar, calls currentCityWeatherFunction and saveSearch function
 $("#submit").click(function(event){
@@ -105,7 +105,7 @@ currentWeatherContainerEl.appendChild(humidityEl);
 //Condition for matching weather status to a playlist - assigns search terms related to weather
 var status = (weather.weather[0].main);
 if (status == "Clear"){
-    var searchTerms = ["sunny%20day%20music","sunny%20mood%20playlist","sun%20day%20songs"];
+    var searchTerms = ["clear%20day%20music","summer%20vibes%20playlist","summer%20day%20songs"];
     var getSearchTerm = searchTerms[Math.floor(Math.random()*searchTerms.length)];
     youTubeMusic(getSearchTerm);
     console.log(getSearchTerm,searchTerms[getSearchTerm]);
