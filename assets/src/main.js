@@ -92,15 +92,11 @@ var temperatureEl = document.createElement("SPAN");
 temperatureEl.textContent = "Temperature: " + weather.main.temp + " °F";
 currentWeatherContainerEl.appendChild(temperatureEl);
 
-//Create a span element to hold Windspeed data
-var windSpeedEl = document.createElement("SPAN");
-windSpeedEl.textContent = "Wind Speed: " + weather.wind.speed + " MPH";
-currentWeatherContainerEl.appendChild(windSpeedEl);
-
 //Create a span element to hold Humidity data
 var humidityEl = document.createElement("SPAN");
 humidityEl.textContent = "Humidity: " + weather.main.humidity + " %";
 currentWeatherContainerEl.appendChild(humidityEl);
+
 
 //Condition for matching weather status to a playlist - assigns search terms related to weather
 var status = (weather.weather[0].main);
@@ -152,5 +148,4 @@ fetch(url)
     console.log(data.items);
     document.querySelector(".youtubeVideo").src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
 });
-};
-
+}; 
