@@ -61,6 +61,7 @@ fetch(queryCurrentWeatherURL)
 .then(function(response){
     response.json().then(function(data){
         displayCurrentWeather(data,city);
+    
         });
     });
 };
@@ -74,7 +75,6 @@ var displayCurrentWeather =function(weather,searchedCity){
 var statusEl = document.createElement("SPAN");
 statusEl.textContent = "Status: " + weather.weather[0].main;
 currentWeatherContainerEl.appendChild(statusEl);
-
 
 //Format date element and append to searched city
 var currentDate = document.createElement("SPAN");
@@ -101,16 +101,26 @@ var humidityEl = document.createElement("SPAN");
 humidityEl.textContent = "Humidity: " + weather.main.humidity + " %";
 currentWeatherContainerEl.appendChild(humidityEl);
 
+//Condition for matching weateher status to a playlist
+var status = (weather.weather[0].main);
+if (status === "Clear"){
+    youTubeMusic(status)
+}
+else{ console.log(status)}
+
 };
 
 //Function for YouTube Playlist API Call
+var youTubeMusic = function(){
 const searchTerms = ["rainy%20day%20music"];
 //const getSearchTerm = () => searchTerms[Math.floor(Math.random() * (searchTerms.length-1))];
 const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${searchTerms}&key=${youTubeAPIKey}`;
-// console.log(url);
+
 fetch(url)
   .then(response => response.json())
   .then(data => {
     //console.log(data.items[0].id.videoId);
     document.querySelector(".youtubeVideo").src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
 });
+};
+
