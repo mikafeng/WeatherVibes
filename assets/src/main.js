@@ -1,5 +1,6 @@
 //Global Variables
 var searchedCities = [];
+var searchTerms=[];
 var currentWeatherContainerEl=document.querySelector("#current-weather-container");
 var citySearchedInputEl = document.querySelector("#searched-city");
 var searchHistoryEl;
@@ -101,25 +102,36 @@ var humidityEl = document.createElement("SPAN");
 humidityEl.textContent = "Humidity: " + weather.main.humidity + " %";
 currentWeatherContainerEl.appendChild(humidityEl);
 
-//Condition for matching weateher status to a playlist
+//Condition for matching weather status to a playlist - assigns search terms related to weather
 var status = (weather.weather[0].main);
-if (status === "Clear"){
-    youTubeMusic(status)
+if (status === "Clouds"){
+    var searchTerms = ["cloudy%20day%20music","cloud%20mood%20playlist","twilight%20soundtrack"];
+    var getSearchTerm = searchTerms[Math.floor(Math.random()*searchTerms.length)];
+    youTubeMusic(getSearchTerm);
+    console.log(getSearchTerm,searchTerms[getSearchTerm]);
+}
+else if (status === "Rain"){
+    var searchTerms = ["rainy%20day%20music","rainy%20day%20playlist","lofi%20beats%20playlist"];
+    var getSearchTerm = searchTerms[Math.floor(Math.random()*searchTerms.length)];
+    youTubeMusic(getSearchTerm)
+    
+}
+else if (status === "Snow"){
+    var searchTerms = ["snow%20christmas%20music","holiday%20playlist","winter%20wonderland%20playlist"];
+    var getSearchTerm = searchTerms[Math.floor(Math.random()*searchTerms.length)];
+    youTubeMusic(getSearchTerm)
+    
 }
 else{ console.log(status)}
 
 };
 
 //Function for YouTube Playlist API Call
-var youTubeMusic = function(){
-const searchTerms = ["rainy%20day%20music"];
-//const getSearchTerm = () => searchTerms[Math.floor(Math.random() * (searchTerms.length-1))];
-const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${searchTerms}&key=${youTubeAPIKey}`;
-
+var youTubeMusic = function(getSearchTerm){
+const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${getSearchTerm}&key=${youTubeAPIKey}`;
 fetch(url)
   .then(response => response.json())
   .then(data => {
-    //console.log(data.items[0].id.videoId);
     document.querySelector(".youtubeVideo").src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
 });
 };
