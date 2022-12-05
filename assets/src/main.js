@@ -140,7 +140,7 @@ else{ console.log(status)}
 };
 
 //Function for YouTube Playlist API Call
-/*var youTubeMusic = function(getSearchTerm){
+var youTubeMusic = function(getSearchTerm){
 const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${getSearchTerm}&key=${youTubeAPIKey}`;
 fetch(url)
   .then(response => response.json())
@@ -148,4 +148,4 @@ fetch(url)
     console.log(data.items);
     document.querySelector(".youtubeVideo").src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
 });
-}; */
+}; 
