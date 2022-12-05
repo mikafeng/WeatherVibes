@@ -19,13 +19,13 @@
    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
     <title>Weather Vibes</title>
 </head>
-<header class="title">Weather Vibes
+<header class="text-center p-2 m-2"><h1>Weather Vibes</h1>
 </header>
 
 <body>
     <main class="container-fluid">
         <div class="row">
-            <aside class="col-12 col-md-3 p-2">
+            <aside class="col p-2">
 
                 <form>
                     <!-- City Selection -->
@@ -43,28 +43,30 @@
                         </div>
                   
             </aside>
+                   <!-- Tempo Selection -->
+            <section class="col-3">
+                <div class="p-2">
+                <p class="tempoChoice" id="tempoChoice">Pick your Tempo:</p>
+                    <ul>
+                        <button class="button" id="upbeat">Upbeat &#127774</button>
+                        <button class="button" id="mellow">Mellow &#128526</button>
+                        <button class="button" id="backgroundMusic">Background Music &#127926</button>
+                    </ul>
+                </div>
+            </section>
 
                     <!-- Playlist - Embedded Video-->
-                        <div class="p-2 col-md-8">
+                <section class="col-6">    
+                    <div class="p-2">
                                 <h4>Your Weather Playlist</h4>
                             <div class="write-container">
-                              <iframe width="100%" height="500px" class="youtubeVideo">
+                              <iframe width="100%" height="400px" class="youtubeVideo">
                             </iframe>
                             </div>
                          </div>      
-            
+                </section>
         </div>
     </main>
-
-<!-- Tempo Selection -->
-<section>
-    <p class="tempoChoice" id="tempoChoice">Pick your Tempo:</p>
-    <ul>
-        <button class="button" id="upbeat">Upbeat &#127774</button>
-        <button class="button" id="mellow">Mellow &#128526</button>
-        <button class="button" id="backgroundMusic">Background Music &#127926</button>
-    </ul>
-</section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
