@@ -19,17 +19,17 @@
    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
     <title>Weather Vibes</title>
 </head>
-<header class="title">Weather Vibes
+<header class="text-center p-2 m-2"><h1>Weather Vibes</h1>
 </header>
 
 <body>
     <main class="container-fluid">
         <div class="row">
-            <aside class="col-12 col-md-3 p-2">
+            <aside class="col p-2">
 
                 <form>
                     <!-- City Selection -->
-                    <h4>Search for a City:</h4>
+                    <h5>Search for a City:</h5>
                     <input id = "searchBar" class = "form-control" type="search" placeholder="Search City"></input>
                     <button id = "submit" class = "form-control mt-2 btn btn-primary" type="button">Search &#x1F50E</button>
                 </form>
@@ -38,33 +38,35 @@
            
                     <!-- Current Weather Display -->
                     <div class ="p-2">
-                        <h5 id="searched-city" class="p-2"></h5>
+                        <h4 id="searched-city" class="p-2"></h4>
                         <div id="current-weather-container" class="p-2 list-group"></div>
                         </div>
                   
             </aside>
+                   <!-- Tempo Selection -->
+            <section class="col-3">
+                <div class="p-2">
+                <h5 class="tempoChoice" id="tempoChoice">Pick your Tempo:</h5>
+                    <ul class="btn-group-vertical">
+                        <button class="button m-2" id="upbeat">Upbeat &#127774</button>
+                        <button class="button m-2" id="mellow">Mellow &#128526</button>
+                        <button class="button m-2" id="backgroundMusic">Background Music &#127926</button>
+                    </ul>
+                </div>
+            </section>
 
                     <!-- Playlist - Embedded Video-->
-                        <div class="p-2 col-md-8 border justify-content-center">
-                          <h4>Your Weather Playlist</h4>
+                <section class="col-6">    
+                    <div class="p-2">
+                                <h5>Your Weather Playlist:</h5>
                             <div class="write-container">
-                              <iframe width="440px" height="400px" class="youtubeVideo">
+                              <iframe width="100%" height="400px" class="youtubeVideo">
                             </iframe>
                             </div>
                          </div>      
-            
+                </section>
         </div>
     </main>
-
-<!-- Tempo Selection -->
-<section>
-    <p class="tempoChoice" id="tempoChoice">Pick your Tempo:</p>
-    <ul>
-        <button class="button" id="upbeat">Upbeat &#127774</button>
-        <button class="button" id="mellow">Mellow &#128526</button>
-        <button class="button" id="backgroundMusic">Background Music &#127926</button>
-    </ul>
-</section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
