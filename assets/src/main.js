@@ -21,7 +21,12 @@ if(city){
 
 saveSearch();
 
+//Clear search bar
+$("#searchBar").val("")
+
 });
+
+
 
 //Function to save user input to local storage
 var saveSearch = function(){
