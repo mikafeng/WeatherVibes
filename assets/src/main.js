@@ -8,15 +8,21 @@ var citySearchedInputEl = document.querySelector("#searched-city");
 var weatherAPIKey = "c463d1ce337cdd1109532dfc090902c3";
 var youTubeAPIKey = "AIzaSyDM2sR2vev0LrWNZ3RLH4-RvSlEH_BV2L0";
 
-//Search bar click action function - reads user input from search bar, calls currentCityWeatherFunction and saveSearch function
+//Search bar kepress event handler & click action function - 
+//reads user input from search bar, calls currentCityWeatherFunction, saveSearch function, and clears the search bar input
+$("input").keypress(function(event) {
+    if (event.which === 13); 
+    event.preventDefault();
+    //console.log("it worked"); 
+    $("#submit").click();   
+ });
+
 $("#submit").click(function(event){
     event.preventDefault();
-
 var city = $("#searchBar").val();
 if(city){
     currentCityWeather(city);
     searchedCities.unshift({city});
-
 }
 
 saveSearch();
@@ -25,8 +31,6 @@ saveSearch();
 $("#searchBar").val("")
 
 });
-
-
 
 //Function to save user input to local storage
 var saveSearch = function(){
@@ -125,7 +129,7 @@ else{ console.log(status)}
 };
 
 //Function for YouTube Playlist API Call
-var youTubeMusic = function(getSearchTerm){
+/*var youTubeMusic = function(getSearchTerm){
     
 const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${getSearchTerm}&type=video&videoEmbeddable=true&videoSyndicated=true&key=${youTubeAPIKey}`;
 
@@ -135,4 +139,4 @@ fetch(url)
     console.log(data.items);
     document.querySelector(".youtubeVideo").src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
 });
-};
+};*/
