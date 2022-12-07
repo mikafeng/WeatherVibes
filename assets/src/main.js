@@ -122,3 +122,17 @@ fetch(url)
     document.querySelector(".youtubeVideo").src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
 });
 }; */
+
+
+//click action function - uses "mood" buttons to change page background 
+$('#upbeat').click(function() {
+    $("body").css("background","#ffdb00");
+})
+
+$('#mellow').click(function() {
+    $("body").css("background","#9ab7c4");
+})
+
+$('#backgroundMusic').click(function() {
+    $("body").css("background","#395a57");
+})
