@@ -1,13 +1,85 @@
 
-body {
-    margin: 30px;
+
+/* Header and Hero Image Styling */
+header,html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #f1f1f1;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+/* Hero Image, scalable */
+.hero-image {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  background: url(https://cdn.pixabay.com/photo/2022/06/20/14/20/space-7273891_1280.jpg) no-repeat center;
+  background-size: cover;
+  filter:grayscale(70%);
+
+}
+
+/* Container holds Header and sub header/button */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* overflow: hidden; */
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+
 }
 
 
-header {
+.container h1 {
+  font-size: 72px;
+  letter-spacing: 0.2em;
+  margin: 0;
+}
+
+/* Background/Border around header, Weather Vibes */
+.container h1 span {
+  border: 5px solid rgb(213, 227, 244);
+  background: rgba(29, 39, 48, 0.5);
+  padding: 10px 14px;
+  display: inline-block;
+  box-shadow:0 0 20px #88a7b6;
+  border-radius: 5px 50px;
+}
+/* subtitle, will add description */
+.des {
+  margin: 20px;
+  display: block;
+  font-size: 20px;
+  font-weight: lighter;
+  text-shadow: 0 0px 10px black;
+  letter-spacing: 0.5em;
 
 }
 
+
+/* button, perhaps can put search city here, with output below in row. or can delete */
+.btn{
+  color: #313131;
+  padding: 5px 14px;
+  font-size: 20px;
+  text-decoration: none;
+  background: #f1f1f1;
+  border-radius: 19px;
+  transition: 0.3s all;
+
+}
+
+.btn:hover {
+  opacity: 0.5;
+}
+
+/* column headings */
 h5 {
     text-align: center;
     font-weight: 150px;
@@ -18,6 +90,44 @@ h5 {
 ol, ul {
     list-style: none;
   }
+
+/* button style from "css scan" */
+.button{
+  align-items: center;
+  appearance: none;
+  background-color: #3EB2FD;
+  background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd,sans-serif;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s,background-position .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+
+
+.button:focus:not(:active) {
+  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+}
+
 
   /* input, select, option, optgroup, textarea, button,
   pre, code {
