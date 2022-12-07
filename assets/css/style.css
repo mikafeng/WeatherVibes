@@ -1,0 +1,43 @@
+
+body {
+    margin: 30px;
+}
+
+
+header {
+
+}
+
+h5 {
+    text-align: center;
+    font-weight: 150px;
+    font-variant-caps:all-small-caps;
+}
+
+
+ol, ul {
+    list-style: none;
+  }
+
+  /* input, select, option, optgroup, textarea, button,
+  pre, code {
+    font-size: 100%;
+    font-family: inherit;
+  } */
+
+
+  /* #current-weather-container {
+    background-color: ghostwhite;
+  } */
+
+#upbeat {
+    
+}
+
+#mellow {
+
+}
+
+#backgroundMusic {
+
+}
