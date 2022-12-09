@@ -1,5 +1,6 @@
 
 
+
 /* Header and Hero Image Styling */
 header,html {
   height: 100%;
@@ -21,7 +22,7 @@ header,html {
 
 }
 
-/* Container holds Header and sub header/button */
+/* Container holds Header and sub header */
 .container {
   position: absolute;
   top: 50%;
@@ -32,25 +33,24 @@ header,html {
   color: white;
   font-weight: 700;
   text-transform: uppercase;
-
 }
-
 
 .container h1 {
   font-size: 72px;
   letter-spacing: 0.2em;
-  margin: 0;
+   margin: 0;
 }
 
 /* Background/Border around header, Weather Vibes */
 .container h1 span {
   border: 5px solid rgb(213, 227, 244);
-  background: rgba(29, 39, 48, 0.5);
+  background: rgba(29, 39, 48, 0.6);
   padding: 10px 14px;
   display: inline-block;
   box-shadow:0 0 20px #88a7b6;
   border-radius: 5px 50px;
 }
+
 /* subtitle, will add description */
 .des {
   margin: 20px;
@@ -62,24 +62,26 @@ header,html {
 
 }
 
-
-/* button, perhaps can put search city here, with output below in row. or can delete */
-.btn{
-  color: #313131;
-  padding: 5px 14px;
-  font-size: 20px;
-  text-decoration: none;
-  background: #f1f1f1;
-  border-radius: 19px;
-  transition: 0.3s all;
-
+.about {
+ background: rgba(8, 59, 104, 0.16)
 }
+
+
+
+/* Potential constant gradient overlay color on the backgrounds that correspond to the mood buttons */
+/* .overlayColor {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(22, 38, 26, 0.7));
+} */
+
 
 .btn:hover {
   opacity: 0.5;
 }
 
-/* column headings */
+/* all column headings */
 h5 {
     text-align: center;
     font-weight: 150px;
@@ -91,7 +93,7 @@ ol, ul {
     list-style: none;
   }
 
-/* button style from "css scan" */
+/* Background Mood --> button style from "css scan" */
 .button{
   align-items: center;
   appearance: none;
