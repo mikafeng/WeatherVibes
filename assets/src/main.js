@@ -3,6 +3,8 @@ var searchedCities = [];
 var searchTerms=[];
 var currentWeatherContainerEl=document.querySelector("#current-weather-container");
 var citySearchedInputEl = document.querySelector("#searched-city");
+var searchHistoryEl;
+var searchHistoryButtonEl = document.querySelector("#search-history-button");
 
 //Variable to store API keys
 var weatherAPIKey = "c463d1ce337cdd1109532dfc090902c3";
@@ -23,6 +25,7 @@ var city = $("#searchBar").val();
 if(city){
     currentCityWeather(city);
     searchedCities.unshift({city});
+    searchHistory(city);
 }
 
 saveSearch();
@@ -36,6 +39,30 @@ $("#searchBar").val("")
 var saveSearch = function(){
     localStorage.setItem("searchedCities",JSON.stringify(searchedCities));
 };
+
+//Function to save user input as buttons
+var searchHistory = function(searchHistory){
+
+    searchHistoryEl = document.createElement("button");
+    searchHistoryEl.textContent = searchHistory;
+    searchHistoryEl.classList = "d-flex w-100 justify-content-center border btn-light rounded p-2 mb-3 mt-3"
+    searchHistoryEl.setAttribute("data-city", searchHistory)
+    searchHistoryEl.setAttribute("type","submit");
+
+    searchHistoryButtonEl.prepend(searchHistoryEl);
+
+};
+
+//Search history buttons re-search that city on click
+var searchHistoryHandler = function(event){
+    var city = event.target.getAttribute("data-city")
+    if(city){
+        currentCityWeather(city);
+
+    }
+};
+
+searchHistoryButtonEl.addEventListener("click",searchHistoryHandler);
 
 //Function for Current Weather API Call
 var currentCityWeather = function(city){
