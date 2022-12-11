@@ -95,9 +95,6 @@ else if (status == "Rain" || status == "Thunderstorm" || status == "Drizzle" || 
     youTubeMusic(getSearchTerm)
     console.log(getSearchTerm,searchTerms[getSearchTerm]);
 
-    //Spotify iFrame API test (only provides song previews)
-    //document.querySelector(".youtubeVideo").src = `https://open.spotify.com/embed/playlist/47S4MBG0EEXwA0GdJUA4Ur`
-    
 }
 
 else if (status == "Snow"){
