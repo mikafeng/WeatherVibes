@@ -142,14 +142,22 @@ fetch(url)
 };*/
 
 //click action function - uses "mood" buttons to change page background 
-$('#upbeat').click(function() {
-    $("body").css("background","#ffdb00");
+$('#vibrant-nature').click(function() {
+    $("body").css("background","#b6d387");
 })
 
-$('#mellow').click(function() {
+$('#linux-nebulous').click(function() {
+    $("body").css("background","#b490c8");
+})
+
+$('#cloud-shapes').click(function() {
     $("body").css("background","#9ab7c4");
 })
 
-$('#backgroundMusic').click(function() {
-    $("body").css("background","#395a57");
+$('#rainy-day').click(function() {
+    $("body").css("background","#348495");
 })
+$('#winter-wonderland').click(function() {
+    $("body").css("background","#dafdff");
+})
+
