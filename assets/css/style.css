@@ -98,9 +98,9 @@ ol, ul {
   }
 
 /* Background Mood --> button style from "css scan" */
-.button{
-  align-items: center;
-  appearance: none;
+/* .button{ */
+  /* align-items: center; */
+  /* appearance: none;
   background-color: #3EB2FD;
   background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
   background-size: calc(100% + 20px) calc(100% + 20px);
@@ -126,7 +126,7 @@ ol, ul {
   touch-action: manipulation;
   vertical-align: top;
   white-space: nowrap;
-}
+} */
 
 
 
@@ -135,16 +135,12 @@ ol, ul {
 }
 
 
-  /* input, select, option, optgroup, textarea, button,
+  input, select, option, optgroup, textarea, button,
   pre, code {
     font-size: 100%;
     font-family: inherit;
-  } */
+  }
 
-
-  /* #current-weather-container {
-    background-color: ghostwhite;
-  } */
 
 #upbeat {
     
