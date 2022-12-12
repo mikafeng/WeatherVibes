@@ -79,9 +79,10 @@ header {
 }
 /* all card headings */
 h4 {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px 10px;
     text-align: center;
-    font-weight: 150px;
+    font-weight: light;
     font-variant-caps:all-small-caps;
 }
 
