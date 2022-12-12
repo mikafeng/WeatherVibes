@@ -173,7 +173,7 @@ $('#vibrant-nature').click(function() {
 })
 
 $('#linux-nebulous').click(function() {
-    $("body").css("background","url(https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2050&q=80)");
+    $("body").css("background","url(https://wallpapercave.com/wp/scUll9f.jpg)");
 })
 
 $('#cloud-shapes').click(function() {
