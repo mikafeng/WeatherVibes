@@ -13,10 +13,11 @@ var youTubeAPIKey = "AIzaSyDM2sR2vev0LrWNZ3RLH4-RvSlEH_BV2L0";
 //Search bar kepress event handler & click action function - 
 //reads user input from search bar, calls currentCityWeatherFunction, saveSearch function, and clears the search bar input
 $("input").keypress(function(event) {
-    if (event.which === 13); 
-    event.preventDefault();
-    //console.log("it worked"); 
-    $("#submit").click();   
+    if (event.which === 13){
+        event.preventDefault();
+        //console.log("it worked"); 
+        $("#submit").click(); 
+    }; 
  });
 
 $("#submit").click(function(event){
@@ -24,7 +25,7 @@ $("#submit").click(function(event){
 var city = $("#searchBar").val();
 if(city){
     currentCityWeather(city);
-    searchedCities.unshift({city});
+    searchedCities.unshift(city);
     searchHistory(city);
 }
 
@@ -47,7 +48,6 @@ var searchHistory = function(searchHistory){
     searchHistoryEl.textContent = searchHistory;
     searchHistoryEl.classList = "d-flex w-100 justify-content-center border btn-light rounded p-2 mb-3 mt-3"
     searchHistoryEl.setAttribute("data-city", searchHistory)
-    searchHistoryEl.setAttribute("type","submit");
 
     searchHistoryButtonEl.prepend(searchHistoryEl);
 
@@ -62,6 +62,8 @@ var searchHistoryHandler = function(event){
     }
 };
 
+//Event listener added to the search history button element that calls searchHistoryHandler
+//when buttons are clicked
 searchHistoryButtonEl.addEventListener("click",searchHistoryHandler);
 
 //Function for Current Weather API Call
@@ -152,8 +154,8 @@ else{ console.log(status)}
 
 };
 
-//Function for YouTube Playlist API Call
-/*var youTubeMusic = function(getSearchTerm){
+//Function for YouTube API Call
+var youTubeMusic = function(getSearchTerm){
     
 const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${getSearchTerm}&type=video&videoEmbeddable=true&videoSyndicated=true&key=${youTubeAPIKey}`;
 
@@ -163,7 +165,7 @@ fetch(url)
     console.log(data.items);
     document.querySelector(".youtubeVideo").src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
 });
-};*/
+};
 
 //click action function - uses "mood" buttons to change page background 
 $('#vibrant-nature').click(function() {
