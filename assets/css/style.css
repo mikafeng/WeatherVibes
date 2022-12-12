@@ -3,7 +3,6 @@ header,html {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: #f1f1f1;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
@@ -133,7 +132,6 @@ ol, ul {
 .button:focus:not(:active) {
   box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
 }
-
 
   /* input, select, option, optgroup, textarea, button,
   pre, code {
