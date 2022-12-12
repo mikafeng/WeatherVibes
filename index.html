@@ -21,7 +21,7 @@
 <!-- <header></header>class="header text-center p-2 m-2"><h1>Weather Vibes</h1> -->
 <!-- Moved header outside of body -->
 <header>
-    <div class="hero-image">
+    <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1><span>Weather Vibes</span></h1>
             <span class="des">Weather API // Playlist Match</span>
@@ -32,13 +32,13 @@
 
 <body>
 
-    <main class="container-fluid overlayColor">
-        <div class="card-deck mt-2">
+    <main class="container-fluid">
+        <div class="card-deck mt-2 text-center">
             <!-- columns within row -->
-                <aside class="card p-2">
+                <aside class="card p-2 border-0">
             <!-- City Selection -->
                     <form>
-                        <h5>Your City</h5>
+                        <h4>Your City</h4>
                         <input id = "searchBar" class = "form-control" type="search" placeholder="Search City"></input>
                         <button id = "submit" class = "form-control mt-2 btn btn-primary" type="button">Search &#x1F50E</button>
                     </form>
@@ -53,23 +53,23 @@
                 </aside>
 
             <!-- Tempo Selection -->
-                <section class="card">
+                <section class="card p-2 bg-transparent border-0">
                     <div class="p-2">
-                    <h5 class="tempoChoice" id="tempoChoice">Background Mood</h5>
-                        <ul class="btn-group-vertical"> 
-                            <button class="button m-2" id="vibrant-nature" type="button" > Vibrant Nature 🌳</button>
-                            <button class="button m-2" id="linux-nebulous" type="button" >Linux Nebulous 🌠</button>
-                            <button class="button m-2" id="cloud-shapes" type="button" >Cloud Shapes ⛅</button>
-                            <button class="button m-2" id="rainy-day" type="button" >Rainy Day ☔</button>
-                            <button class="button m-2" id="winter-wonderland" type="button" >Winter Wonderland ❄️</button>
+                    <h4 id="tempoChoice">Background Mood</h4>
+                        <ul class="btn-group-vertical list-group list-group-flush"> 
+                            <button class="btn m-2 btn-light list-item btn-outline-dark" id="vibrant-nature" type="button" > Vibrant Nature 🌳</button>
+                            <button class="btn m-2 btn-light list-item btn-outline-dark" id="linux-nebulous" type="button" >Linux Nebulous 🌠</button>
+                            <button class="btn m-2 btn-light list-item btn-outline-dark" id="cloud-shapes" type="button" >Cloud Shapes ⛅</button>
+                            <button class="btn m-2 btn-light list-item btn-outline-dark" id="rainy-day" type="button" >Rainy Day ☔</button>
+                            <button class="btn m-2 btn-light list-item btn-outline-dark" id="winter-wonderland" type="button" >Winter Wonderland ❄️</button>
                         </ul>
                     </div>
                 </section>
 
              <!-- Playlist - Embedded Video-->
-                <section class="card">    
+                <section class="card bg-transparent border-0">    
                     <div class="p-2">
-                        <h5>Local Music Vibes</h5>
+                        <h4>Local Music Vibes</h4>
                             <div class="write-container">
                               <iframe width="100%" height="240px" class="youtubeVideo">
                                 </iframe>

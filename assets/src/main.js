@@ -169,21 +169,22 @@ fetch(url)
 
 //click action function - uses "mood" buttons to change page background 
 $('#vibrant-nature').click(function() {
-    $("body").css("background","#b6d387");
+    $("body").css("background","url(https://images.unsplash.com/photo-1471644806490-77c53366b18b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80)");
 })
 
 $('#linux-nebulous').click(function() {
-    $("body").css("background","#b490c8");
+    $("body").css("background","url(https://wallpapercave.com/wp/scUll9f.jpg)");
 })
 
 $('#cloud-shapes').click(function() {
-    $("body").css("background","#9ab7c4");
+    $("body").css("background","url(https://images.unsplash.com/photo-1498496294664-d9372eb521f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80)");
 })
 
 $('#rainy-day').click(function() {
-    $("body").css("background","#348495");
+    $("body").css("background","url(https://images.unsplash.com/photo-1664531685548-f77f1da7c010?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80)");
 })
+
 $('#winter-wonderland').click(function() {
-    $("body").css("background","#dafdff");
+    $("body").css("background","url(https://images.unsplash.com/photo-1485594050903-8e8ee7b071a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1624&q=80)");
 })
 

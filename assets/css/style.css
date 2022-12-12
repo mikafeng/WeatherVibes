@@ -1,5 +1,7 @@
-/* Header and Hero Image Styling */
-header,html {
+/* -------Header and Hero Image/Jumbotron Styling --------*/
+
+/* header fall back */
+header {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -7,24 +9,17 @@ header,html {
 
 }
 
-/* Hero Image, scalable */
-.hero-image {
-  position: relative;
-  height: 350px;
+.jumbotron {
   overflow: hidden;
-  background: url(https://cdn.pixabay.com/photo/2022/06/20/14/20/space-7273891_1280.jpg) no-repeat center;
+  background-color: #e0ab81 no-repeat center;
+  background-image: linear-gradient(118deg, #e0ab81 11%, #1b2ad2 100%);
   background-size: cover;
-  filter:grayscale(70%);
-
+  opacity: .8;
+  filter:grayscale(20%);
 }
 
 /* Container holds Header and sub header */
 .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* overflow: hidden; */
   text-align: center;
   color: white;
   font-weight: 700;
@@ -32,24 +27,25 @@ header,html {
 }
 
 .container h1 {
-  font-size: 72px;
+  font-size: 60px;
   letter-spacing: 0.2em;
-   margin: 0;
+  margin: 0;
+
 }
 
 /* Background/Border around header, Weather Vibes */
 .container h1 span {
-  border: 5px solid rgb(213, 227, 244);
-  background: rgba(29, 39, 48, 0.6);
+  border: 5px solid rgb(252, 252, 252);
   padding: 10px 14px;
+  background: url("https://cdn.pixabay.com/photo/2022/06/20/14/20/space-7273891_1280.jpg");
   display: inline-block;
-  box-shadow:0 0 20px #88a7b6;
+  box-shadow:5px 5px 20px #d8dee1;
   border-radius: 5px 50px;
 }
 
-/* subtitle, will add description */
+/* subtitle*/
 .des {
-  margin: 20px;
+  margin: 10px;
   display: block;
   font-size: 20px;
   font-weight: lighter;
@@ -57,37 +53,36 @@ header,html {
   letter-spacing: 0.5em;
 
 }
-
+/* short description */
 .about {
- background: rgba(8, 59, 104, 0.16)
+ background: rgba(8, 59, 104, 0.3);
+ letter-spacing: 0.1em;
+ font-weight: lighter
 }
 
 
+/* ----------------------BODY-------------------------------*/
 
-/* Potential constant gradient overlay color on the backgrounds that correspond to the mood buttons */
-/* .overlayColor {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(22, 38, 26, 0.7));
-} */
-
-
+/* Search City Button */
 .btn:hover {
   opacity: 0.5;
 }
+
+/* Card Styling */
 .card{
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
 
 }
-/* all column headings */
-h5 {
+/* all card headings */
+h4 {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px 10px;
     text-align: center;
-    font-weight: 150px;
+    font-weight: light;
     font-variant-caps:all-small-caps;
 }
 
@@ -96,53 +91,6 @@ ol, ul {
     list-style: none;
   }
 
-/* Background Mood --> button style from "css scan" */
-.button{
-  align-items: center;
-  appearance: none;
-  background-color: #3EB2FD;
-  background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
-  background-size: calc(100% + 20px) calc(100% + 20px);
-  border-radius: 100px;
-  border-width: 0;
-  box-shadow: none;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: CircularStd,sans-serif;
-  font-size: 1rem;
-  height: auto;
-  justify-content: center;
-  line-height: 1.5;
-  padding: 6px 20px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color .2s,background-position .2s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: top;
-  white-space: nowrap;
-}
-
-
-
-.button:focus:not(:active) {
-  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
-}
-
-  /* input, select, option, optgroup, textarea, button,
-  pre, code {
-    font-size: 100%;
-    font-family: inherit;
-  } */
-
-
-  /* #current-weather-container {
-    background-color: ghostwhite;
-  } */
 
 #upbeat {
     
