@@ -6,17 +6,17 @@ Weather Vibes is an interactive web application that allows users to search for 
 
 Key Features:
 
-City Weather Search:
-Users can enter the name of a city and click the search button to retrieve the current weather data.
-The application leverages the Open Weather API[ server-side API to](https://openweathermap.org/api) to fetch real-time weather information for the specified city.
-Background Selection:
-After retrieving the weather data, users can choose a background image that aligns with their current mood.
-A CSS framework is utilized to present a visually appealing user interface for selecting backgrounds.
-Music Playlist Generation:
-Based on the weather conditions of the selected city, the application generates a curated music playlist.
-The playlist is tailored to match the atmosphere, temperature, or other relevant weather factors.
-The Youtube Data API is utilized to search for music that contains these keywords.
+* City Weather Search:
+  Users can enter the name of a city and click the search button to retrieve the current weather data.
+  The application leverages the [Open Weather API](https://openweathermap.org/api) to fetch real-time weather information for the specified city.
 
+* Background Selection:
+  After retrieving the weather data, users can choose a background image that aligns with their current mood.
+  A CSS framework is utilized to present a visually appealing user interface for selecting backgrounds.
+
+* Music Generation:
+  Based on the weather conditions of the selected city, the application generates music that is tailored to match the atmosphere, temperature, or other relevant weather     factors.The [Youtube Data API](https://developers.google.com/youtube/v3/) is utilized to search for music that contains keywords matching the weather and mood.
+  
 ### API Reference
 * https://openweathermap.org/
 * https://developers.google.com/youtube/v3
